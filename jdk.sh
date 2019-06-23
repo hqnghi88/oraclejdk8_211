@@ -6,23 +6,23 @@ mv ./jdk1.8.0_211 /usr/lib/jvm/
 
 update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_211/bin/java" 1
 update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_211/bin/javac" 1
-update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.8.0_211/bin/javaws" 1
+#update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.8.0_211/bin/javaws" 1
 
 chmod a+x /usr/bin/java
 chmod a+x /usr/bin/javac
-chmod a+x /usr/bin/javaws
+#chmod a+x /usr/bin/javaws
 chown -R root:root /usr/lib/jvm/jdk1.8.0_211
 
 cd ..
 
+
+apt install unzip
 }
 
 install_gamaweb(){
 rm GamaWeb.zip
 rm -rf GamaWeb
 wget https://github.com/gama-platform/gama.cloud/releases/download/latest/GamaWeb.zip
-
-apt install unzip
 
 unzip GamaWeb.zip
 mv GamaWeb/GamaWeb.war GamaWeb/offline_GamaWeb.war
