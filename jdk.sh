@@ -26,6 +26,9 @@ apt install unzip
 
 unzip GamaWeb.zip
 mv GamaWeb/GamaWeb.war GamaWeb/offline_GamaWeb.war
+cd GamaWeb
+java -jar tomcat_launcher.jar /offline_GamaWeb offline_GamaWeb.war 8080 extract
+cd ..
 chmod -R +777 GamaWeb
 cd GamaWeb
 java -jar tomcat_launcher.jar /offline_GamaWeb offline_GamaWeb.war 8080
