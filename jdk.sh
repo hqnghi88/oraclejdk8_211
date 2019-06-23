@@ -18,7 +18,8 @@ cd ..
 }
 
 install_gamaweb(){
-
+rm GamaWeb.zip
+rm -rf GamaWeb
 wget https://github.com/gama-platform/gama.cloud/releases/download/latest/GamaWeb.zip
 
 apt install unzip
@@ -27,7 +28,7 @@ unzip GamaWeb.zip
 mv GamaWeb/GamaWeb.war GamaWeb/offline_GamaWeb.war
 chmod -R +777 GamaWeb
 cd GamaWeb
-java -jar tomcat_launcher.jar "/offline_GamaWeb" "offline_GamaWeb.war"
+java -jar tomcat_launcher.jar /offline_GamaWeb offline_GamaWeb.war 8080
 }
 
 
