@@ -29,7 +29,13 @@ chmod -R +777 GamaWeb
 cd GamaWeb
 java -jar tomcat_launcher.jar "/offline_GamaWeb" "offline_GamaWeb.war"
 }
-if [ -e ${/usr/lib/jvm/jdk1.8.0_211} ]
+
+
+
+DIR="/usr/lib/jvm/jdk1.8.0_211"
+
+
+if [ -d "$DIR" ]
 then
 install_gamaweb
 else
